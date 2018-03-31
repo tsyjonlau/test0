@@ -1,0 +1,26 @@
+{
+  "name": "CybelAngel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "client": "client"
+  },
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "setup": "npm i && cd client && npm i && cd .."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.5"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
